@@ -22,6 +22,8 @@ services:
     restart: unless-stopped
     expose:
       - 9090
+    ports:
+      - "9090:9090"
 
   grafanadb:
     image: mysql:5.6
@@ -44,6 +46,8 @@ services:
     restart: unless-stopped
     expose:
       - 9091
+    ports:
+      - "9091:9091"
   
   grafana:
     image: grafana/grafana:latest
@@ -74,3 +78,5 @@ services:
     restart: unless-stopped
     expose:
       - 3000
+    ports:
+      - "3000:3000"
